@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+  var Link = {
+    setcolor:function(color){
+      var alist =document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1;
+    }
+
+    }
+  }
+  var Body ={
+      setcolor:function(color){
+      document.querySelector('body').style.color = color;
+    },
+      setbackgroundcolor:function(color){
+      document.querySelector('body').style.backgroundColor = color;
+      }
+  }
+
+  function nightdayhandler(self){
+  var target = document.querySelector('body');
+   if(document.querySelector('#night_day').value === 'night'){
+   
+    Body.setbackgroundcolor('black');
+    Body.setcolor('white');
+    self.value = 'day';
+    Link.setcolor('powderblue');
+
+  }else{
+    Body.setbackgroundcolor('white');
+    Body.setcolor('black')
+    self.value = 'night';
+    Link.setcolor('blue');
+    }
+  }
+
+
+</script>
+
+<body>
+
+  <h1><a href="web.html"> WEB</a></h1>
+
+   <input id="night_day" type="button" value="night" onclick="nightdayhandler(this);">
+
+
+<div id="grid">
+  <ol>
+    <li><a href="html. html">HTML</a></li>
+    <li><a href="css.html">CSS</a></li>
+    <li><a href="javaScrpit.html">JavaScript</a></li>
+  </ol>
+
+  <div>
+  <h2>WEB</h2>
+  웹(Web)이란?
+  월드 와이드 웹(World Wide Web)은 전 세계에 퍼져 있는 인터넷 정보들을 서로 거미줄처럼 연결해준다.<br>
+  즉, 인터넷에 연결된 사용자들이 서로의 정보를 주고받을 수 있는 공간을 의미한다.<br>
+  이러한 월드 와이드 웹을 WWW으로 줄여 말하기도 하며, 간단히 웹 또는 W3라고도 한다.<br>
+
+  웹 프로젝트는 1989년 유럽 핵물리 공동 연구소(CERN)의 연구원이었던 팀 버너스 리에 의해서 처음 시작되었다. <br>
+  연구소 내의 직원들이 수많은 정보를 주고받는 상황에 다른 운영체제나 애플리케이션을 사용하고<br>
+  있어서 발생하는 문제를 해결하기 위해 만든 개념이다.<br>
+
+  따라서 일정한 형식의 기준인 HTML을 제안하게 되었고, HTML은 운영체제나 애플리케이션이 <br>
+  달라도 인터넷 브라우저만 있으면 모두가 동일한 정보를 볼 수 있게 되었다.<br>
+  즉, 웹은 HTML로 대표되는 하이퍼텍스트 언어 문서와 인터넷이 융합되어 등장한 시스템이다.<br>
+</div>
+</div>
+</body>
+
+</html>

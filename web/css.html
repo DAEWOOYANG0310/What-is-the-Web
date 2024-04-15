@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS</title>
+</head>
+
+  <link rel="stylesheet" href="style.css">
+
+  <Script>
+    var Body = {
+      setbackgroundColor:function(color){
+        document.querySelector('body').style.backgroundColor = color;
+      },
+      setcolor:function(color){
+        document.querySelector('body').style.color = color;
+      }
+
+    }
+
+   var Links = {
+    setcolor:function(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0; 
+      while(i < alist.length){
+        alist[i].style.color = color
+        i = i + 1;
+      }
+    }
+  }
+
+    function nightdayhandler(self){
+      var taget =  document.querySelector('body').style;
+    
+    if(document.querySelector('#night_day').value === 'night'){
+      Body.setbackgroundColor('black');
+      Body.setcolor('white');
+      self.value = 'day';
+      Links.setcolor('powderblue');
+      
+  
+    }else{
+      Body.setbackgroundColor('white');
+      Body.setcolor('black');
+      self.value = 'night';
+      Links.setcolor('blue');
+    }
+  }
+  </Script>
+
+<body>
+
+  <h1><a href="web.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)  ">
+
+  <div id="grid">
+    <ol>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="javaScrpit.html">JavaScript</a></li>
+    </ol>
+
+    <div>
+      <h2>CSS</h2>
+      <p>그래서 CSS가 뭔가요?
+        HTML와 같이 CSS는 실제로 프로그래밍 언어는 아닙니다.
+        마크업(markup) 언어 도 아닙니다. Style sheet 언어 입니다.
+        HTML 문서에 있는 요소들에 선택적으로 스타일을 적용할 수 있다는 말입니다.
+        예를 들면, HTML 페이지에서 모든 문단 요소들을 선택하고 그 문단 요소들 안에
+        있는 텍스트를 빨갛게 바꾸려고 한다면
+        다음과 같이 CSS를 작성할 것입니다그래서 CSS가 뭔가요?
+        CSS란 무엇인가? (HTML과의 차이)
+        CSS(Cascading Style Sheets)는 HTML과 함께 웹 표준의 기본 개념으로 웹 문서의 콘텐츠와 레이아웃, 글꼴과 같은 시각적 요소들의 디자인을 분리하기 위한 목적으로 등장하였습니다.
+        HTML이 웹 문서의 텍스트나 이미지, 표와 같은 뼈대를 만드는 것이라면 CSS는 HTML로 만들어 놓은 텍스트의 색상이나 크기와 같은 웹 문서의 디자인을 담당한다고 생각하시면 됩니다. 이렇게 CSS를
+        사용하면 디자인 코드를 따로 뺄 수 있어 문서의 레이아웃을 효과적으로 할 수 있고, 간단한 코드만으로도 웹 문서 전체의 글자 크기나 글 자체, 줄 간격, 배경 색상 등도 자유롭게 디자인 할 수
+        있습니다.
+
+
+
+        CSS의 장점
+        한번 스타일을 정의해놓고 여러 개의 문서에서 여러 번 불러 사용할 수 있어 재사용성이 높다.
+        일관성 있는 웹 페이지의 제작이 가능하다.
+        스타일 수정 시 정의된 한 곳만 수정하면 되기에 유지보수가 쉽다.
+        웹 문서의 내용과 상관없이 디자인만 바꿀 수 있다.
+        다양한 기기에 맞게 탄력적으로 바뀌는 문서를 만들 수 있다.
+
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
+        
