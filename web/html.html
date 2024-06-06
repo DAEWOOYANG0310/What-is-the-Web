@@ -5,58 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>html</title>
+  <Script src="color.js"></Script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
-
-<script>
-
-    var Link = {
-      setcolor:function(color){
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-    alist[i].style.color = color;
-    i = i + 1;
-    }
-    }
-    }
-
-  
-   var Body = {
-    setcolor:function(color){
-      document.querySelector('body').style.color = color;
-    },
-    setbackgroundcolor:function(color){
-      document.querySelector('body').style.backgroundColor = color;
-    }
-  }
-  function nightdayhandler(self){
-  if(document.querySelector('#night_day').value === 'night'){
-     Body.setbackgroundcolor('black');
-     Body.setcolor('white');
-     self.value = 'day'
-     Link.setcolor('powderblue')
-  }else{
-    Body.setbackgroundcolor('white');
-    Body.setcolor('black');
-    self.value = 'night'
-    Link.setcolor('blue')
-
-  }
-}
-</script>
 <body>
   <h1><a href="web.html">WEB</a></h1>
-  <input id="night_day" type="button" value="night" onclick="nightdayhandler(this);">
- 
-    
-
-
-
- 
- 
   <div id="grid">
     <ol>
+      <input id="night_day" type="button" value="night" onclick="nightdayhandler(this);">
+      <li><a href="search.html">댓글</a></li>
       <li><a href="html.html">HTML</a></li>
       <li><a href="css.html">CSS</a></li>
       <li><a href="javaScrpit.html">JavaScript</a></li>
@@ -75,6 +32,9 @@
     </div>
 
   </div>
+  <p>
+ 
 </body>
+
 
 </html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<script>
+
+  function maketext() {
+    let contentbox = document.getElementById('contentbox');
+    let content9 = contentbox.value.trim();
+
+    if (content9 !== '') {
+      commentContainer = document.createElement("div");
+      commentContainer.classList.add("comment");
+      commentContainer.textContent = content9;
+      let readcontent = document.getElementById("readcontent");
+      readcontent.appendChild(commentContainer);
+      contentbox.value = "";
+
+    }
+  }
+
+
+ 
+//   function nightdayHandler() {
+//   let body = document.querySelector('body');
+//   let link = document.querySelectorAll('a');
+//   let turn = document.getElementById('night_day');
+
+//   if (turn.textContent === 'night') {
+//     body.style.color = 'black';
+//     body.style.backgroundColor = 'white';
+//     turn.textContent = 'day';
+//   } else {
+//     body.style.color = 'white';
+//     body.style.backgroundColor = 'black';
+//     turn.textContent = 'night';
+//   }
+// }
+
+function nightdayHandler() {
+  let body = document.querySelector('body');
+  let links = document.querySelectorAll('a');
+  let button = document.getElementById('night_day');
+
+  if (button.textContent === 'night') {
+    body.style.color = 'black';
+    body.style.backgroundColor = 'white';
+    for (let link of links) {
+      link.style.color = 'blue';
+    }
+    button.textContent = 'day';
+  } else {
+    body.style.color = 'white';
+    body.style.backgroundColor = 'black';
+    for (let link of links) {
+      link.style.color = 'powderblue';
+    }
+    button.textContent = 'night';
+  }
+}
+
+</script>
+<style>
+  #bigbox {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    width: 480px;
+    margin: 30px auto 0px auto;
+  }
+
+  .moon {
+    width: 480px;
+    margin: 30px auto 0px auto;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid gray;
+    margin-left:560px ;
+    
+  }
+
+  h1 {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding: 50px;
+    margin: 0px auto 0px auto;
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+
+  #grid ol {
+    padding-left: 50px;
+    padding-right: 17px;
+    border-right: 1px solid gray;
+    margin: 0px auto 0px auto;
+  }
+
+  #grid div {
+    padding: 20px;
+    padding-top: 0px;
+  }
+</style>
+
+<body>
+  <h1><a href="web.html">Web</a></h1>
+
+  <div id="grid">
+    <ol>
+      <button id="night_day" onclick="nightdayHandler()">night</button>
+      <li><a href="search.html">댓글</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="javaScrpit.html">JavaScript</a></li>
+    </ol>
+
+
+ <div id="bigbox">
+      <textarea id="contentbox" placeholder="댓글쓰기"></textarea>
+      <button onclick="maketext()" type="button">저장</button>
+    </div>
+  </div>
+    <div id="readcontent" class="moon">
+    </div>   
+  
+</body>
+
+</html>

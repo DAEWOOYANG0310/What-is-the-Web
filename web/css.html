@@ -5,58 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS</title>
-</head>
-
+  <Script src="color.js"></Script>
   <link rel="stylesheet" href="style.css">
-
-  <Script>
-    var Body = {
-      setbackgroundColor:function(color){
-        document.querySelector('body').style.backgroundColor = color;
-      },
-      setcolor:function(color){
-        document.querySelector('body').style.color = color;
-      }
-
-    }
-
-   var Links = {
-    setcolor:function(color){
-      var alist = document.querySelectorAll('a');
-      var i = 0; 
-      while(i < alist.length){
-        alist[i].style.color = color
-        i = i + 1;
-      }
-    }
-  }
-
-    function nightdayhandler(self){
-      var taget =  document.querySelector('body').style;
-    
-    if(document.querySelector('#night_day').value === 'night'){
-      Body.setbackgroundColor('black');
-      Body.setcolor('white');
-      self.value = 'day';
-      Links.setcolor('powderblue');
-      
-  
-    }else{
-      Body.setbackgroundColor('white');
-      Body.setcolor('black');
-      self.value = 'night';
-      Links.setcolor('blue');
-    }
-  }
-  </Script>
-
+  </head>
 <body>
 
   <h1><a href="web.html">WEB</a></h1>
-  <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)  ">
-
   <div id="grid">
     <ol>
+      <input id="night_day" type="button" value="night" onclick="nightdayhandler(this)  ">
+      <li><a href="search.html">댓글</a></li>
       <li><a href="html.html">HTML</a></li>
       <li><a href="css.html">CSS</a></li>
       <li><a href="javaScrpit.html">JavaScript</a></li>
@@ -87,8 +45,12 @@
         다양한 기기에 맞게 탄력적으로 바뀌는 문서를 만들 수 있다.
 
       </p>
+     
+      </div>
     </div>
   </div>
+ 
+  
 </body>
 
 </html>
