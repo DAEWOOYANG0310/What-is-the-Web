@@ -71,7 +71,7 @@
 
 #### 2. 메인페이지
 
-<img src= ""alt="접근제한" width="680" height="350">
+<img src= "https://github.com/hyejinleeee/B05/issues/18#issue-2337208982"alt="접근제한" width="680" height="350">
 
 #### 3. 게시물 생성페이지
 
